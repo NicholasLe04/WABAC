@@ -28,7 +28,7 @@ const Testimonials = () => {
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold">Loved by Users and Professionals</h2>
         <p className="mt-4 text-lg max-w-2xl mx-auto text-text-secondary">
-          Don't just take our word for it. Here's what people are saying about EchoVault.
+          Don't just take our word for it. Here's what people are saying about WABAC.
         </p>
         <div className="mt-12 grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (

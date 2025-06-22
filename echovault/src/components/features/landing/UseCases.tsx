@@ -24,7 +24,7 @@ const UseCases = () => {
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold">A Companion for Every Journey</h2>
         <p className="mt-4 text-lg max-w-2xl mx-auto text-text-secondary">
-          Whether for yourself, a family member, or a patient, EchoVault provides support.
+          Whether for yourself, a family member, or a patient, WABAC provides support.
         </p>
         <div className="mt-12 grid md:grid-cols-3 gap-8">
           {useCases.map((useCase, index) => (

@@ -84,32 +84,18 @@ const LoginForm = () => {
         {error && <p className="text-red-500 text-sm">{error}</p>}
         <div>
           <Button type="submit" className="w-full">
-            Sign in
+            Sign In
           </Button>
         </div>
+        <div className="text-sm text-center">
+          <p className="text-text-secondary">
+            Don't have an account?{" "}
+            <Link href="/signup" className="font-medium text-accent-blue hover:underline">
+              Sign up
+            </Link>
+          </p>
+        </div>
       </form>
-      <div className="relative my-4">
-        <div className="absolute inset-0 flex items-center">
-          <span className="w-full border-t border-card-border" />
-        </div>
-        <div className="relative flex justify-center text-sm">
-          <span className="px-2 bg-bg-light text-text-secondary">Or continue with</span>
-        </div>
-      </div>
-      <div>
-        <Button variant="outline" className="w-full">
-          <Mic className="mr-2 w-5 h-5" />
-          Sign in with Voice (coming soon)
-        </Button>
-      </div>
-      <div className="text-sm text-center">
-        <p className="text-text-secondary">
-          Don't have an account?{" "}
-          <Link href="/signup" className="font-medium text-accent-blue hover:underline">
-            Sign up
-          </Link>
-        </p>
-      </div>
     </div>
   );
 };

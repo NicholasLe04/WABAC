@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 const SignUpForm = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -26,7 +27,7 @@ const SignUpForm = () => {
     const response = await fetch('/api/auth/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ name, email, password }),
     });
 
     const data = await response.json();
@@ -45,9 +46,26 @@ const SignUpForm = () => {
     <div className="w-full max-w-md p-8 space-y-8 bg-card-bg rounded-card shadow-card backdrop-blur-lg border border-card-border">
       <div className="text-center">
         <h2 className="text-3xl font-bold text-text-primary">Create an Account</h2>
-        <p className="mt-2 text-text-secondary">Start your journey with EchoVault.</p>
+        <p className="mt-2 text-text-secondary">Start your journey with WABAC.</p>
       </div>
       <form className="space-y-6" onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="name" className="block text-sm font-medium text-text-secondary">
+            Full Name
+          </label>
+          <div className="mt-1">
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autoComplete="name"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full px-3 py-2 bg-white/50 border border-card-border rounded-input focus:outline-none focus:ring-2 focus:ring-accent-blue"
+            />
+          </div>
+        </div>
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-text-secondary">
             Email address

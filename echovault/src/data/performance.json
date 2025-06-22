@@ -1,0 +1,117 @@
+[
+  {
+    "id": "perf_1",
+    "userId": "1",
+    "date": "2025-06-21T00:00:00Z",
+    "accuracyPercentage": 92,
+    "vocabularyComplexity": 0.85,
+    "forgottenMemoriesCount": 1,
+    "totalMemoriesReviewed": 6
+  },
+  {
+    "id": "perf_2",
+    "userId": "1",
+    "date": "2025-06-20T00:00:00Z",
+    "accuracyPercentage": 88,
+    "vocabularyComplexity": 0.78,
+    "forgottenMemoriesCount": 2,
+    "totalMemoriesReviewed": 5
+  },
+  {
+    "id": "perf_3",
+    "userId": "1",
+    "date": "2025-06-19T00:00:00Z",
+    "accuracyPercentage": 95,
+    "vocabularyComplexity": 0.92,
+    "forgottenMemoriesCount": 0,
+    "totalMemoriesReviewed": 4
+  },
+  {
+    "id": "perf_4",
+    "userId": "1",
+    "date": "2025-06-18T00:00:00Z",
+    "accuracyPercentage": 87,
+    "vocabularyComplexity": 0.75,
+    "forgottenMemoriesCount": 3,
+    "totalMemoriesReviewed": 7
+  },
+  {
+    "id": "perf_5",
+    "userId": "1",
+    "date": "2025-06-17T00:00:00Z",
+    "accuracyPercentage": 91,
+    "vocabularyComplexity": 0.82,
+    "forgottenMemoriesCount": 1,
+    "totalMemoriesReviewed": 5
+  },
+  {
+    "id": "perf_6",
+    "userId": "2",
+    "date": "2025-06-21T00:00:00Z",
+    "accuracyPercentage": 89,
+    "vocabularyComplexity": 0.79,
+    "forgottenMemoriesCount": 2,
+    "totalMemoriesReviewed": 6
+  },
+  {
+    "id": "perf_7",
+    "userId": "2",
+    "date": "2025-06-20T00:00:00Z",
+    "accuracyPercentage": 93,
+    "vocabularyComplexity": 0.88,
+    "forgottenMemoriesCount": 1,
+    "totalMemoriesReviewed": 5
+  },
+  {
+    "id": "perf_8",
+    "userId": "2",
+    "date": "2025-06-19T00:00:00Z",
+    "accuracyPercentage": 90,
+    "vocabularyComplexity": 0.83,
+    "forgottenMemoriesCount": 2,
+    "totalMemoriesReviewed": 4
+  },
+  {
+    "id": "perf_9",
+    "userId": "2",
+    "date": "2025-06-18T00:00:00Z",
+    "accuracyPercentage": 36,
+    "vocabularyComplexity": 0.77,
+    "forgottenMemoriesCount": 3,
+    "totalMemoriesReviewed": 6
+  },
+  {
+    "id": "perf_10",
+    "userId": "2",
+    "date": "2025-06-17T00:00:00Z",
+    "accuracyPercentage": 14,
+    "vocabularyComplexity": 0.2,
+    "forgottenMemoriesCount": 1,
+    "totalMemoriesReviewed": 5
+  },
+  {
+    "accuracyPercentage": 20,
+    "vocabularyComplexity": 0.1,
+    "totalMemoriesReviewed": 3,
+    "forgottenMemoriesCount": 1,
+    "date": "2025-06-21T00:00:00Z",
+    "userId": "1",
+    "id": "perf_1750605534786"
+  },
+  {
+    "id": "perf_1750611694405",
+    "date": "2025-06-22T17:01:34.405Z",
+    "accuracyPercentage": 100,
+    "vocabularyComplexity": 0.3,
+    "forgottenMemoriesCount": 0,
+    "totalMemoriesReviewed": 3
+  },
+  {
+    "id": "perf_1750613539069",
+    "date": "2025-06-22T17:32:19.069Z",
+    "accuracyPercentage": 0,
+    "vocabularyComplexity": 0.5,
+    "forgottenMemoriesCount": 0,
+    "totalMemoriesReviewed": 1
+  }
+]

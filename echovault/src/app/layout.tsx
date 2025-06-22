@@ -6,8 +6,8 @@ import Navbar from "@/components/shared/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "EchoVault - Talk to Your Memory",
-  description: "A voice-first memory companion that helps you reflect, remember, and detect cognitive changes early.",
+  title: "WABAC - Because forgetting shouldn't mean losing.",
+  description: "Your personal memory companion, helping you capture, reflect, and stay connected to what matters most.",
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         <main className="container mx-auto p-4">
-          {children}
+        {children}
         </main>
       </body>
     </html>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { BrainCircuit, LayoutDashboard, BarChart3, User, LogOut } from "lucide-react";
+import { Brain, LayoutDashboard, BarChart3, User, LogOut } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
 
@@ -35,8 +35,8 @@ const Navbar = () => {
     <header className="bg-card-bg/80 backdrop-blur-lg border-b border-card-border sticky top-0 z-50">
       <nav className="container mx-auto flex items-center justify-between p-4">
         <Link href="/" className="flex items-center gap-2 font-bold text-xl text-text-primary">
-          <BrainCircuit className="w-8 h-8" />
-          <span>EchoVault</span>
+          <Brain className="w-8 h-8" />
+          <span>WABAC</span>
         </Link>
         {user && (
           <div className="hidden md:flex items-center gap-6">

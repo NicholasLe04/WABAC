@@ -1,0 +1,95 @@
+[
+  {
+    "id": "mem_1",
+    "userId": "1",
+    "date": "2024-03-20T10:30:00Z",
+    "summary": "Had a breakthrough in understanding quantum computing concepts during today's lecture."
+  },
+  {
+    "id": "mem_2",
+    "userId": "1",
+    "date": "2024-03-19T15:45:00Z",
+    "summary": "Completed the first draft of my research paper on AI ethics."
+  },
+  {
+    "id": "mem_3",
+    "userId": "1",
+    "date": "2024-03-18T09:15:00Z",
+    "summary": "Morning meditation session helped clear my mind for the day ahead."
+  },
+  {
+    "id": "mem_4",
+    "userId": "1",
+    "date": "2024-03-17T14:20:00Z",
+    "summary": "Successfully debugged a complex issue in the project's codebase."
+  },
+  {
+    "id": "mem_5",
+    "userId": "1",
+    "date": "2024-03-16T11:00:00Z",
+    "summary": "Interesting discussion about consciousness and AI with Professor Smith."
+  },
+  {
+    "id": "mem_1750605132555",
+    "userId": "2",
+    "conversation": "Gardening and growing tomatoes.",
+    "key_events": "Gardening, growing tomatoes.",
+    "createdAt": "2025-06-22T15:12:12.555Z"
+  },
+  {
+    "id": "mem_1750605384390",
+    "userId": "2",
+    "conversation": "Today, I'm going to buy a new skateboard.",
+    "key_events": "Buying a new skateboard.",
+    "createdAt": "2025-06-22T15:16:24.390Z"
+  },
+  {
+    "id": "mem_1750605532004",
+    "userId": "2",
+    "conversation": "Driving to Los Angeles for Disneyland.",
+    "key_events": "Driving to Los Angeles, Going to Disneyland.",
+    "createdAt": "2025-06-22T15:18:52.004Z"
+  },
+  {
+    "id": "mem_1750608282232",
+    "userId": "2",
+    "conversation": "User finished a project today and it worked successfully, which was a significant accomplishment for them.",
+    "key_events": "Completed project successfully",
+    "createdAt": "2025-06-22T16:04:42.232Z"
+  },
+  {
+    "id": "mem_1750608453333",
+    "userId": "2",
+    "conversation": "User completed a project today.",
+    "key_events": "Project completion",
+    "createdAt": "2025-06-22T16:07:33.333Z"
+  },
+  {
+    "id": "mem_1750610814564",
+    "userId": "2",
+    "conversation": "User mentions they are about to face judgment.",
+    "key_events": "Pending judgment situation",
+    "createdAt": "2025-06-22T16:46:54.564Z"
+  },
+  {
+    "id": "mem_1750611090477",
+    "userId": "2",
+    "conversation": "User is having water and matcha tea, expressing particular enjoyment of the matcha.",
+    "key_events": "Drinking matcha tea and water",
+    "createdAt": "2025-06-22T16:51:30.477Z"
+  },
+  {
+    "id": "mem_1750611691828",
+    "userId": "2",
+    "conversation": "User passed their Calculus 1 exam",
+    "key_events": "Passed Calculus 1 exam",
+    "createdAt": "2025-06-22T17:01:31.828Z"
+  },
+  {
+    "id": "mem_1750613536759",
+    "userId": "2",
+    "conversation": "Planning to demo a new product at the UC Berkeley AI hackathon",
+    "key_events": "Product demo planned for UC Berkeley AI hackathon",
+    "createdAt": "2025-06-22T17:32:16.759Z"
+  }
+]

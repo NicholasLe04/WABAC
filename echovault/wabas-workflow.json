@@ -1,0 +1,315 @@
+{
+    "name": "WABAC",
+    "nodes": [
+      {
+        "name": "introduction",
+        "type": "conversation",
+        "isStart": true,
+        "metadata": {
+          "position": {
+            "x": -463.789675766393,
+            "y": -422.35214098318727
+          }
+        },
+        "prompt": "You are a helpful assistant who will be recording details about me and my memories. You should respond to anything the user says, and if they want to store/retrieve memory, you should progress to that state. Start off by introducing yourself, WABAC (pronounced, WAY-BACK), and then ask if they want to store/recall a memory today?",
+        "model": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "maxTokens": 250,
+          "temperature": 0.3
+        },
+        "voice": {
+          "voiceId": "Elliot",
+          "provider": "vapi"
+        },
+        "variableExtractionPlan": {
+          "output": []
+        },
+        "messagePlan": {
+          "firstMessage": "Hi there!"
+        }
+      },
+      {
+        "name": "conversation_1750568226846",
+        "type": "conversation",
+        "metadata": {
+          "position": {
+            "x": -902.7409493654218,
+            "y": 148.2091405723172
+          }
+        },
+        "prompt": "You will listen to the user's input, remembering what they tell you. You will store this information as a summarized string in the variable, \"conversation\" You will then have another variable, \"key_events\" which is a string storing key events that happened during the day. If the user says they want to store more events, you should append to those variables. If the user finishes, you should ask them if they want to store more memories.",
+        "model": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "maxTokens": 250,
+          "temperature": 0.3
+        },
+        "variableExtractionPlan": {
+          "output": [
+            {
+              "enum": [],
+              "type": "string",
+              "title": "conversation",
+              "description": "A summarized transcript of the day."
+            },
+            {
+              "enum": [],
+              "type": "string",
+              "title": "key_events",
+              "description": "The big main events, listed with commas."
+            }
+          ]
+        },
+        "messagePlan": {
+          "firstMessage": "Great! Go ahead and tell me about some memories from today."
+        }
+      },
+      {
+        "name": "conversation_1750568417963",
+        "type": "conversation",
+        "metadata": {
+          "position": {
+            "x": -917.9436908202173,
+            "y": 738.717600825186
+          }
+        },
+        "prompt": "Recap what the user said, by reading off the two variables you stored. Do it like this: \"Alright. Just to recap, your day went like this: {{conversation}}. Key events to you were {{key_events}}\"",
+        "model": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "maxTokens": 250,
+          "temperature": 0.3
+        },
+        "messagePlan": {
+          "firstMessage": ""
+        }
+      },
+      {
+        "name": "hangup_1750568547367",
+        "type": "tool",
+        "metadata": {
+          "position": {
+            "x": -427.3765789377877,
+            "y": 1547.776061972861
+          }
+        },
+        "tool": {
+          "type": "endCall"
+        }
+      },
+      {
+        "name": "apiRequest_1750575339035",
+        "type": "tool",
+        "metadata": {
+          "position": {
+            "x": -56.929318481458864,
+            "y": 141.81530281156716
+          }
+        },
+        "tool": {
+          "url": "https://ecd7-162-254-218-147.ngrok-free.app/api/memory?userId=2",
+          "name": "getMemories",
+          "type": "apiRequest",
+          "method": "GET",
+          "function": {
+            "name": "untitled_tool",
+            "parameters": {
+              "type": "object",
+              "required": [],
+              "properties": {}
+            }
+          }
+        }
+      },
+      {
+        "name": "conversation_1750575371935",
+        "type": "conversation",
+        "metadata": {
+          "position": {
+            "x": -56.929318481458864,
+            "y": 391.81530281156716
+          }
+        },
+        "prompt": "You should find some data to repeat back to the user. Pick up to 5 at random, and ask them to the user one by one. If they do not remember when it was/what it was (you may swap the two), add 1 to num_missed. Set num_asked to how many memories you ask the user.",
+        "model": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "maxTokens": 250,
+          "temperature": 0.3
+        },
+        "variableExtractionPlan": {
+          "output": [
+            {
+              "enum": [],
+              "type": "integer",
+              "title": "num_asked",
+              "description": "Number of memories asked"
+            },
+            {
+              "enum": [],
+              "type": "integer",
+              "title": "num_missed",
+              "description": "Num of memories forgotten, default 0"
+            }
+          ]
+        },
+        "messagePlan": {
+          "firstMessage": ""
+        }
+      },
+      {
+        "name": "conversation_1750575525238",
+        "type": "conversation",
+        "metadata": {
+          "position": {
+            "x": -59.3349046400441,
+            "y": 892.8296146026473
+          }
+        },
+        "prompt": "Tell the user they missed {{num_missed}} out of {{num_asked}} questions. Then say, \"Would you like to have more memories asked, or log a memory?\"",
+        "model": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "maxTokens": 250,
+          "temperature": 0.3
+        },
+        "messagePlan": {
+          "firstMessage": ""
+        }
+      },
+      {
+        "name": "postMemories",
+        "type": "tool",
+        "metadata": {
+          "position": {
+            "x": -919.7765394128005,
+            "y": 1091.3571220098488
+          }
+        },
+        "tool": {
+    "url": "https://ecd7-162-254-218-147.ngrok-free.app/api/memory",
+    "name": "postMemories",
+    "type": "apiRequest",
+    "method": "POST",
+    "headers": {
+      "type": "object",
+      "properties": {
+        "Content-Type": {
+          "type": "string",
+          "value": "application/json"
+        }
+      }
+    },
+    "body": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "number",
+          "value": 2
+        },
+        "conversation": {
+          "type": "string",
+          "value": "{{conversation}}"
+        },
+        "key_events": {
+          "type": "string",
+          "value": "{{key_events}}"
+        }
+      }
+    },
+    "function": {
+      "name": "untitled_tool",
+      "parameters": {
+        "type": "object",
+        "required": [],
+        "properties": {}
+      }
+    }
+  }
+}
+    ],
+    "edges": [
+      {
+        "from": "introduction",
+        "to": "conversation_1750568226846",
+        "condition": {
+          "type": "ai",
+          "prompt": "if the user wants to log memories"
+        }
+      },
+      {
+        "from": "conversation_1750568226846",
+        "to": "conversation_1750568417963",
+        "condition": {
+          "type": "ai",
+          "prompt": "If the user is done giving you memories"
+        }
+      },
+      {
+        "from": "apiRequest_1750575339035",
+        "to": "conversation_1750575371935",
+        "condition": {
+          "type": "ai",
+          "prompt": "if the user said yes"
+        }
+      },
+      {
+        "from": "conversation_1750575371935",
+        "to": "conversation_1750575525238",
+        "condition": {
+          "type": "ai",
+          "prompt": "after asking your last question and getting the last answer, move on"
+        }
+      },
+      {
+        "from": "introduction",
+        "to": "apiRequest_1750575339035",
+        "condition": {
+          "type": "ai",
+          "prompt": "user wants to recall memories"
+        }
+      },
+      {
+        "from": "conversation_1750568417963",
+        "to": "postMemories",
+        "condition": {
+          "type": "ai",
+          "prompt": "the user affirms/does not want to store more memories"
+        }
+      },
+      {
+        "from": "postMemories",
+        "to": "hangup_1750568547367",
+        "condition": {
+          "type": "ai",
+          "prompt": "user says a farewell"
+        }
+      },
+      {
+        "from": "conversation_1750575525238",
+        "to": "hangup_1750568547367",
+        "condition": {
+          "type": "ai",
+          "prompt": "user says a farewell"
+        }
+      },
+      {
+        "from": "conversation_1750568417963",
+        "to": "postMemories",
+        "condition": {
+          "type": "ai",
+          "prompt": "if user confirms to save"
+        }
+      },
+      {
+        "from": "conversation_1750575525238",
+        "to": "conversation_1750568226846",
+        "condition": {
+          "type": "ai",
+          "prompt": "user wants to store memories"
+        }
+      }
+    ],
+    "globalPrompt": ""
+  }

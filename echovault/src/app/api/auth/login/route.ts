@@ -15,7 +15,8 @@ export async function POST(req: NextRequest) {
   if (user) {
     // In a real app, you'd create a JWT here.
     // For this example, we'll just return the user object.
-    return NextResponse.json({ id: user.id, email: user.email });
+    const { password, ...userWithoutPassword } = user;
+    return NextResponse.json(userWithoutPassword);
   } else {
     return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 });
   }

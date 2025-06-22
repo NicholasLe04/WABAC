@@ -62,3 +62,4 @@ const ResponseSpeedChart = () => {
 };
 
 export default ResponseSpeedChart;
+ 

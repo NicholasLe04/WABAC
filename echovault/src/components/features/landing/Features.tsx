@@ -29,7 +29,7 @@ const Features = () => {
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold">Powerful Features, Simply Presented</h2>
         <p className="mt-4 text-lg max-w-2xl mx-auto text-text-secondary">
-          EchoVault provides deep insights through a calm, intuitive interface.
+          WABAC provides deep insights through a calm, intuitive interface.
         </p>
         <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (

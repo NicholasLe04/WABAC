@@ -14,6 +14,7 @@ const ProfileForm = () => {
     const userJson = localStorage.getItem('user');
     if (userJson) {
       const currentUser = JSON.parse(userJson);
+      console.log(currentUser);
       setUser(currentUser);
       setPhone(currentUser.phone || '');
     }
@@ -40,8 +41,9 @@ const ProfileForm = () => {
       }
 
       // Update local storage with the new user data
-      localStorage.setItem('user', JSON.stringify(data.user));
-      setUser(data.user);
+      const updatedUser = { ...user, phone: data.user.phone };
+      localStorage.setItem('user', JSON.stringify(updatedUser));
+      setUser(updatedUser);
 
       setMessage('Profile updated successfully!');
     } catch (error: any) {

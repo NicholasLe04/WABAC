@@ -27,5 +27,6 @@
     background-color: var(--color-bg-light);
     color: var(--color-text-primary);
     background-image: linear-gradient(to bottom right, var(--color-gradient-start), var(--color-gradient-end));
+    background-attachment: fixed;
   }
 }

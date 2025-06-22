@@ -1,14 +1,74 @@
 [
-    {
-        "user_id": "1",
-        "insight": "You mentioned 'Sarah' 3 times today. Is her birthday coming up?"
-    },
-    {
-        "user_id": "1",
-        "insight": "Your vocabulary richness was 5% higher than your weekly average."
-    },
-    {
-        "user_id": "2",
-        "insight": "You asked about the time twice in your last call, which is unusual for you."
-    }
-] 
+  {
+    "id": "insight_1",
+    "userId": "1",
+    "date": "2024-03-20T10:30:00Z",
+    "insight": "You mentioned 'Sarah' 3 times today. Is her birthday coming up?"
+  },
+  {
+    "id": "insight_2",
+    "userId": "1",
+    "date": "2024-03-19T15:45:00Z",
+    "insight": "Your vocabulary richness was 5% higher than your weekly average."
+  },
+  {
+    "id": "insight_3",
+    "userId": "2",
+    "date": "2024-03-18T09:15:00Z",
+    "insight": "You asked about the time twice in your last call, which is unusual for you."
+  },
+  {
+    "id": "insight_4",
+    "userId": "2",
+    "date": "2024-03-17T14:20:00Z",
+    "insight": "Great memory retention! You recalled 95% of today's memories accurately."
+  },
+  {
+    "id": "insight_1750605134314",
+    "userId": "2",
+    "date": "2025-06-22T15:12:14.314Z",
+    "insight": "Starting fresh with today's memory."
+  },
+  {
+    "id": "insight_1750605385821",
+    "userId": "2",
+    "date": "2025-06-22T15:16:25.821Z",
+    "insight": "It's okay to forget sometimes."
+  },
+  {
+    "id": "insight_1750605533152",
+    "userId": "2",
+    "date": "2025-06-22T15:18:53.152Z",
+    "insight": "Planning for fun adventures brings joy and anticipation."
+  },
+  {
+    "id": "insight_1750608297790",
+    "userId": "2",
+    "date": "2025-06-22T16:04:57.790Z",
+    "insight": "Starting memory review to assess recall"
+  },
+  {
+    "id": "insight_1750608470142",
+    "userId": "2",
+    "date": "2025-06-22T16:07:50.142Z",
+    "insight": "User has good recall of recent and significant events, but may miss some details of planned activities"
+  },
+  {
+    "id": "insight_1750611091471",
+    "userId": "2",
+    "date": "2025-06-22T16:51:31.471Z",
+    "insight": "User was brief but clear in their communication today, mentioning enjoying matcha. They seem to prefer keeping things concise."
+  },
+  {
+    "id": "insight_1750611692697",
+    "userId": "2",
+    "date": "2025-06-22T17:01:32.697Z",
+    "insight": "Your responses are quite brief today, which is okay. Remember that sharing more details helps create stronger memories."
+  },
+  {
+    "id": "insight_1750613537579",
+    "userId": "2",
+    "date": "2025-06-22T17:32:17.579Z",
+    "insight": "The memory about passing Calculus 1 wasn't recalled, but that's okay. Memory isn't perfect and it's normal to forget some details."
+  }
+]

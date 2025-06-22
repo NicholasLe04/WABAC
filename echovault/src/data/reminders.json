@@ -1,20 +1,33 @@
 [
   {
-    "id": 1,
-    "user_id": "1",
-    "title": "Call mom for her birthday",
-    "created_at": "2024-06-22T10:00:00Z"
-  },
-  {
-    "id": 2,
-    "user_id": "1",
-    "title": "Pick up prescription from pharmacy",
-    "created_at": "2024-06-21T15:30:00Z"
-  },
-  {
     "id": 3,
     "user_id": "2",
-    "title": "Doctor's appointment at 2pm",
-    "created_at": "2024-06-20T11:00:00Z"
+    "title": "Pick up sister from school at 7 PM",
+    "date": "2025-06-23T19:00"
+  },
+  {
+    "id": "reminder_1750605389620", 
+    "userId": "2",
+    "title": "Doctor's appointment at 10 PM",
+    "date": "2025-06-23T22:00"
+  },
+  {
+    "id": "reminder_1750610819482",
+    "userId": "2", 
+    "title": "Judged at 11 AM",
+    "date": "2025-06-23T11:00"
+  },
+  {
+    "id": "reminder_1750611094908",
+    "userId": "2",
+    "title": "Drink water at 5 PM",
+    "date": "2025-06-23T17:00"
+  },
+  {
+    "id": "reminder_1750612168467",
+    "userId": "2",
+    "title": "Water plants",
+    "date": "2025-06-23T10:32",
+    "notes": ""
   }
 ]

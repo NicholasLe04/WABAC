@@ -1,60 +1,66 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { Lightbulb } from "lucide-react";
+import { useEffect, useState } from 'react';
+import { Card } from '@/components/ui/Card';
+import { Lightbulb } from 'lucide-react';
 
 interface Insight {
-    user_id: string;
-    insight: string;
+  id: string;
+  userId: string;
+  insight: string;
+  date: string;
 }
 
-const TodaysInsights = () => {
-    const [insights, setInsights] = useState<Insight[]>([]);
-    const [loading, setLoading] = useState(true);
-  
-    useEffect(() => {
-      const fetchInsights = async () => {
-        const userJson = localStorage.getItem('user');
-        if (userJson) {
-          const currentUser = JSON.parse(userJson);
-          try {
-            const response = await fetch(`/api/dashboard/insights?userId=${currentUser.id}`);
-            if (!response.ok) {
-              throw new Error('Failed to fetch insights');
-            }
-            const data = await response.json();
-            setInsights(data);
-          } catch (error) {
-            console.error(error);
-          } finally {
-            setLoading(false);
-          }
-        } else {
-          setLoading(false);
+export default function TodaysInsights() {
+  const [insight, setInsight] = useState<Insight | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchInsights = async () => {
+      try {
+        const response = await fetch('/api/dashboard/insights');
+        if (!response.ok) {
+          throw new Error('Failed to fetch insights');
         }
-      };
-      fetchInsights();
-    }, []);
+        const data = await response.json();
+        setInsight(data);
+        console.log('Loaded latest insight:', data);
+      } catch (error) {
+        console.error('Error fetching insights:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchInsights();
+  }, []);
 
   return (
-    <div className="p-6 bg-card-bg rounded-card shadow-card backdrop-blur-lg border border-card-border">
-      <h2 className="text-2xl font-bold mb-4">Today's Insights</h2>
-      <div className="space-y-3">
-      {loading ? (
-          <p>Loading insights...</p>
-        ) : insights.length > 0 ? (
-            insights.map((insight, index) => (
-          <div key={index} className="flex items-start gap-3">
-            <Lightbulb className="w-5 h-5 mt-1 text-accent-yellow" />
-            <p className="text-text-secondary">{insight.insight}</p>
+    <Card className="h-full">
+      <div className="p-6 h-full flex flex-col">
+        <div className="flex items-center gap-3 mb-6">
+          <Lightbulb className="w-6 h-6 text-yellow-500" />
+          <h3 className="text-xl font-bold">Today's Insight</h3>
+        </div>
+        {loading ? (
+          <p>Loading insight...</p>
+        ) : insight ? (
+          <div className="flex-grow">
+            <p className="text-brand-deep-blue">{insight.insight}</p>
+            <p className="text-sm text-brand-deep-blue/70 mt-2">
+              {new Date(insight.date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+              })}
+            </p>
           </div>
-            ))
         ) : (
-          <p>No insights for today.</p>
+          <p className="text-brand-deep-blue/70">No insights available.</p>
         )}
       </div>
-    </div>
+    </Card>
   );
-};
-
-export default TodaysInsights;
+}
