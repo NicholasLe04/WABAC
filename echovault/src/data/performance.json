@@ -110,8 +110,8 @@
     "id": "perf_1750613539069",
     "date": "2025-06-22T17:32:19.069Z",
     "accuracyPercentage": 0,
-    "vocabularyComplexity": 0.5,
-    "forgottenMemoriesCount": 0,
+    "vocabularyComplexity": 0.75,
+    "forgottenMemoriesCount": 1,
     "totalMemoriesReviewed": 1
   }
 ]
