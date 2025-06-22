@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  /* Apple-inspired Color Palette */
+  --color-bg-light: #fbfbfd;
+  --color-text-primary: #1d1d1f;
+  --color-text-secondary: #6e6e73;
+  --color-accent-blue: #0071e3;
+  --color-accent-green: #34c759;
+  --color-accent-yellow: #ffcc00;
+  --color-card-bg: rgba(255, 255, 255, 0.5);
+  --color-card-border: rgba(230, 230, 230, 0.7);
+  --color-gradient-start: #d2e5f0;
+  --color-gradient-end: #f0e6e6;
+
+  --font-sans: "Inter", sans-serif;
+
+  --rounded-btn: 9999px;
+  --rounded-card: 1.5rem;
+  --rounded-input: 0.5rem;
+
+  --shadow-card: 0 4px 24px 0 rgba(0, 0, 0, 0.05);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-primary);
+    background-image: linear-gradient(to bottom right, var(--color-gradient-start), var(--color-gradient-end));
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "1": {
+    "vocabulary": [
+      { "name": "Mon", "value": 280 },
+      { "name": "Tue", "value": 310 },
+      { "name": "Wed", "value": 290 },
+      { "name": "Thu", "value": 350 },
+      { "name": "Fri", "value": 320 },
+      { "name": "Sat", "value": 300 },
+      { "name": "Sun", "value": 330 }
+    ],
+    "sentiment": [
+      { "name": "Positive", "value": 65, "fill": "#34c759" },
+      { "name": "Neutral", "value": 25, "fill": "#6e6e73" },
+      { "name": "Negative", "value": 10, "fill": "#0071e3" }
+    ],
+    "responseSpeed": [
+      { "name": "Mon", "speed": 1.8 },
+      { "name": "Tue", "speed": 1.7 },
+      { "name": "Wed", "speed": 1.9 },
+      { "name": "Thu", "speed": 1.6 },
+      { "name": "Fri", "speed": 1.8 },
+      { "name": "Sat", "speed": 1.9 },
+      { "name": "Sun", "speed": 1.7 }
+    ],
+    "namedEntities": [
+        {"name": "Sarah", "value": 12},
+        {"name": "Dr. Evans", "value": 8},
+        {"name": "Lake Trip", "value": 6},
+        {"name": "Medication", "value": 9}
+    ]
+  },
+  "2": {
+    "vocabulary": [
+      { "name": "Mon", "value": 250 },
+      { "name": "Tue", "value": 260 },
+      { "name": "Wed", "value": 270 },
+      { "name": "Thu", "value": 240 },
+      { "name": "Fri", "value": 280 },
+      { "name": "Sat", "value": 290 },
+      { "name": "Sun", "value": 265 }
+    ],
+    "sentiment": [
+      { "name": "Positive", "value": 40, "fill": "#34c759" },
+      { "name": "Neutral", "value": 35, "fill": "#6e6e73" },
+      { "name": "Negative", "value": 25, "fill": "#0071e3" }
+    ],
+    "responseSpeed": [
+      { "name": "Mon", "speed": 2.1 },
+      { "name": "Tue", "speed": 2.2 },
+      { "name": "Wed", "speed": 2.0 },
+      { "name": "Thu", "speed": 2.3 },
+      { "name": "Fri", "speed": 2.1 },
+      { "name": "Sat", "speed": 2.2 },
+      { "name": "Sun", "speed": 2.0 }
+    ],
+    "namedEntities": [
+        {"name": "Old Neighborhood", "value": 15},
+        {"name": "Family Reunion", "value": 10},
+        {"name": "Medication", "value": 5}
+    ]
+  }
+} 

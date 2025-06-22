@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "user_id": "1",
+    "date": "Today, 10:45 AM",
+    "summary": "Talked about the upcoming family reunion and reminisced about last year's trip to the lake. Mentioned needing to buy a birthday gift for Sarah.",
+    "emotion": "Happy",
+    "icon": "Smile",
+    "color": "text-accent-green"
+  },
+  {
+    "id": 2,
+    "user_id": "1",
+    "date": "Yesterday, 3:20 PM",
+    "summary": "Discussed the new medication schedule and a follow-up appointment with Dr. Evans. Expressed some confusion about the dosage.",
+    "emotion": "Neutral",
+    "icon": "Meh",
+    "color": "text-text-secondary"
+  },
+  {
+    "id": 3,
+    "user_id": "2",
+    "date": "June 18, 2024",
+    "summary": "Felt a bit lonely and talked about missing old friends from the neighborhood. Watched a classic movie in the afternoon.",
+    "emotion": "Sad",
+    "icon": "Frown",
+    "color": "text-accent-blue"
+  },
+  {
+    "id": 4,
+    "user_id": "2",
+    "date": "June 18, 2024",
+    "summary": "Feltdasdasd a bit lonely and talked about missing old friends from the neighborhood. Watched a classic movie in the afternoon.",
+    "emotion": "Sad",
+    "icon": "Frown",
+    "color": "text-accent-blue"
+  }
+] 

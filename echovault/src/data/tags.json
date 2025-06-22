@@ -1,0 +1,9 @@
+[
+  { "user_id": "1", "tag": "Sarah" },
+  { "user_id": "1", "tag": "Lake Trip" },
+  { "user_id": "1", "tag": "Dr. Evans" },
+  { "user_id": "1", "tag": "Birthday Gift" },
+  { "user_id": "2", "tag": "Old Neighborhood" },
+  { "user_id": "2", "tag": "Family Reunion" },
+  { "user_id": "2", "tag": "Medication" }
+] 

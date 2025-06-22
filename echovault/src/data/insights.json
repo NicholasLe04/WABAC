@@ -1,0 +1,14 @@
+[
+    {
+        "user_id": "1",
+        "insight": "You mentioned 'Sarah' 3 times today. Is her birthday coming up?"
+    },
+    {
+        "user_id": "1",
+        "insight": "Your vocabulary richness was 5% higher than your weekly average."
+    },
+    {
+        "user_id": "2",
+        "insight": "You asked about the time twice in your last call, which is unusual for you."
+    }
+] 
