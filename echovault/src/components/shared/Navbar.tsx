@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { BrainCircuit, LayoutDashboard, LineChart, LogOut, User } from "lucide-react";
+import { BrainCircuit, LayoutDashboard, BarChart3, User, LogOut } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
 
 const navLinks = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/analytics", label: "Analytics", icon: LineChart },
+  { href: "/analytics", label: "Analytics", icon: BarChart3 },
   { href: "/account", label: "Account", icon: User },
 ];
 

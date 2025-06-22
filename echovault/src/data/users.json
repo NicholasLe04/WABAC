@@ -2,11 +2,13 @@
   {
     "id": "1",
     "email": "alex@example.com",
-    "password": "password123"
+    "password": "password123",
+    "phone": ""
   },
   {
     "id": "2",
     "email": "lcalder2022@gmail.com",
-    "password": "2L!n3#^WWv4%u#VCf7@k"
+    "password": "2L!n3#^WWv4%u#VCf7@k",
+    "phone": "4085946314"
   }
 ]
